@@ -32,4 +32,3 @@ def convert_config():
 
 if __name__ == '__main__':
 	convert_config()
-	execfile('env/bin/aspen')
