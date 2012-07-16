@@ -1,1 +1,1 @@
-web: env/bin/python aspen-vr.py
+web: env/bin/python aspen-vr.py www
