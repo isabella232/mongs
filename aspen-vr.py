@@ -32,3 +32,5 @@ def convert_config():
 
 if __name__ == '__main__':
 	convert_config()
+	__file__ = os.path.join(os.dirname(__file__), 'env', 'bin', 'aspen')
+	execfile('env/bin/aspen')
