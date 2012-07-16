@@ -15,6 +15,7 @@ def convert_config():
 		for field in in_config[section]:
 			value = in_config[section][field]
 			out_config.set(section, field, value)
+	os.path.isdir('.aspen') or os.makedirs('.aspen')
 	with open('.aspen/aspen.conf', 'wb') as f:
 		out_config.write(f)
 
