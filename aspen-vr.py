@@ -3,7 +3,6 @@ Load YAML config and save it as Aspen config before launching.
 """
 
 import os
-import sys
 import yaml
 import ConfigParser
 
@@ -31,16 +30,7 @@ def convert_config():
 	with open('www/.aspen/aspen.conf', 'wb') as f:
 		out_config.write(f)
 
-def set_port():
-	"""
-	Velociraptor designates the port in the environment, but Aspen's only
-	hooks are in the config and the command-line, so alter the command-line
-	to honor the PORT variable.
-	"""
-	sys.argv.extend(['--address', '0.0.0.0:{PORT}'.format(**os.environ)])
-
 if __name__ == '__main__':
 	convert_config()
-	set_port()
 	__file__ = os.path.join(os.path.dirname(__file__), 'env', 'bin', 'aspen')
 	execfile('env/bin/aspen')
