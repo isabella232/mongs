@@ -1,1 +1,1 @@
-web: env/bin/python aspen-vr.py www --address=:$PORT
+web: python aspen-vr.py www --address=:$PORT
