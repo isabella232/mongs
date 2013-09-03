@@ -6,6 +6,8 @@ import os
 import yaml
 import ConfigParser
 
+import aspen.server
+
 def translate(value):
 	"""
 	Take a YAML value and make it a suitable string for ConfigParser.
@@ -32,5 +34,4 @@ def convert_config():
 
 if __name__ == '__main__':
 	convert_config()
-	__file__ = os.path.join(os.path.dirname(__file__), 'env', 'bin', 'aspen')
-	execfile('env/bin/aspen')
+	aspen.server.main()
