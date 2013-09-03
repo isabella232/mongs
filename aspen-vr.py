@@ -7,16 +7,6 @@ import yaml
 
 import aspen.server
 
-def translate(value):
-	"""
-	Take a YAML value and make it a suitable string for ConfigParser.
-	"""
-	if isinstance(value, (list, tuple)):
-		return '\n    '.join(value)
-	if isinstance(value, dict):
-		raise ValueError("Can't translate a dict to ConfigParser format")
-	return value
-
 def convert_config():
 	with open(os.environ['APP_SETTINGS_YAML']) as f:
 		in_config = yaml.load(f)
