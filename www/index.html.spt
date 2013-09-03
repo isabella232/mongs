@@ -1,9 +1,16 @@
-^L
-servers = website.conf.mongs.get('servers', 'localhost')
-servers = [server.strip(',') for server in servers.split()]
-servers = [server for server in servers if server]
+import os
+
+servers_txt = os.path.join(website.project_root, 'servers.txt')
+
+[----]
+
+try:
+    servers = open(servers_txt).read().splitlines()
+except IOError:
+    servers = ['localhost']
 servers.sort()
-^L
+
+[----]
 {% extends "base.html" %}
 {% block content %}
 <table>
