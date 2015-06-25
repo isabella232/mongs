@@ -5,3 +5,5 @@
 ./vendor/simplejson-2.2.1.tar.gz
 ./vendor/pymongo-2.5.2.tar.gz
 PyYAML
+portend
+requests
