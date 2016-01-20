@@ -5,7 +5,7 @@ Load YAML config and save it as Aspen config before launching.
 import os
 
 import yaml
-from aspen import serve, website
+import launch
 
 
 def convert_config():
@@ -19,4 +19,4 @@ def convert_config():
 
 if __name__ == '__main__':
 	convert_config()
-	serve(website.Website())
+	launch.run()

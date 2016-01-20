@@ -1,1 +1,1 @@
-web: ASPEN_WWW_ROOT=www ASPEN_PROJECT_ROOT=. ASPEN_RENDERER_DEFAULT=jinja2 python aspen-vr.py
+web: python aspen-vr.py
