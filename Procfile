@@ -1,1 +1,1 @@
-web: python aspen-vr.py --renderer_default=jinja2 --www_root=www/ --project_root=. --network_address=:$PORT
+web: ASPEN_WWW_ROOT=www ASPEN_PROJECT_ROOT=. ASPEN_RENDERER_DEFAULT=jinja2 python aspen-vr.py
