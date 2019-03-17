@@ -1,7 +1,6 @@
-aspen==0.42
-aspen-jinja2==0.4
-pymongo==3.2.2
-six
+pando
+pymongo
+aspen-jinja2
 
 # requirements for YouGov deploymnet
 PyYAML
