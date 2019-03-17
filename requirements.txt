@@ -1,8 +1,0 @@
-pando
-pymongo
-aspen-jinja2
-
-# requirements for YouGov deploymnet
-PyYAML
-portend
-requests
