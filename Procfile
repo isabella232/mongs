@@ -1,1 +1,1 @@
-web: python aspen-vr.py
+web: python -m launch
