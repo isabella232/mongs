@@ -48,7 +48,8 @@ def get_value(request):
     _id = request.path['filter']
     key = request.path['value']  # derp
 
-    db = pymongo.MongoClient(server)[database][collection]
+    client = connect(server)
+    db = client[database][collection]
     filter = get_single_document_filter(_id)
     document = db.find_one(filter)
     return document[key]
